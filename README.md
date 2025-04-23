@@ -37,10 +37,6 @@ Open a browser and navigate to http://127.0.0.1:8000 (or the assigned port).
 
 ## PROGRAM:
 ```
-from http.server import HTTPServer, BaseHTTPRequestHandler
-
-# Define the HTML content
-content = """
 <!DOCTYPE html>
 <html>
 <head>
@@ -52,42 +48,42 @@ content = """
         <tr bgcolor="lightgreen">
             <th>S.no</th>
             <th>Layer</th>
-            <th>Description</th>
+            <th>PROTOCOLS</th>
         </tr>
         <tr>
             <td>1.</td>
-            <td>Application</td>
-            <td>HTTP</td>
+            <td>APPLICATION</td>
+            <td>HTTP,FTP,DNS,Telent,SSH</td>
         </tr>
         <tr>
             <td>2.</td>
-            <td>Presentation</td>
-            <td>Data translation, encryption, and compression</td>
+            <td>TRANSPORT</td>
+            <td>TCP & UDP</td>
         </tr>
         <tr>
             <td>3.</td>
-            <td>Session</td>
-            <td>Controls dialogues (connections) between computers</td>
+            <td>PRESENTATION</td>
+            <td>SSL,SSH,IMAP,FTP,MPEG,JPEG</td>
         </tr>
         <tr>
             <td>4.</td>
-            <td>Transport</td>
-            <td>Reliable data transfer (TCP/UDP)</td>
+            <td>NETWORK ACCESS LAYER</td>
+            <td>MAC/ETHERNET</td>
         </tr>
         <tr>
             <td>5.</td>
-            <td>Network</td>
-            <td>Path determination and logical addressing</td>
+            <td>SESSION</td>
+            <td>API'S,SOCKETS,WINSOCK</td>
         </tr>
         <tr>
             <td>6.</td>
-            <td>Data Link</td>
-            <td>Physical addressing and error detection</td>
+            <td>DATA LINK </td>
+            <td>ETHERNET,PPP,BRIDGE</td>
         </tr>
         <tr>
             <td>7.</td>
-            <td>Physical</td>
-            <td>Transmission of raw bit stream over physical medium</td>
+            <td>PHYSICAL</td>
+            <td>COAX,FIBER,WIRELESS,HUBS,REPEATERS</td>
         </tr>
     </table>
 </body>
@@ -104,16 +100,16 @@ class MyHandler(BaseHTTPRequestHandler):
         self.wfile.write(content.encode())
 
 # Start server
-server_address = ('', 5000)
+server_address = ('',5000)
 httpd = HTTPServer(server_address, MyHandler)
-print("My webserver is running on port 8000...")
+print("My webserver is running on port 6000...")
 httpd.serve_forever()
+
 ```
-
 ## OUTPUT:
-![alt text](<Screenshot 2025-04-15 143811.png>)
+![Screenshot 2025-04-15 143855](https://github.com/user-attachments/assets/7a82d363-641c-4f75-9827-436f19f1461b)
 
-![alt text](<Screenshot 2025-04-15 143855.png>)
+![Screenshot 2025-04-17 111613](https://github.com/user-attachments/assets/e4953858-58a3-4a43-ac2e-beb44d77151b)
 
 ## RESULT:
 The program for implementing simple webserver is executed successfully.
